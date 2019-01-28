@@ -1,0 +1,12 @@
+.btn-navy {
+    background-color: #2b3d65;
+	color: #FFF !important;
+	font-size: 20px;
+}
+
+.menu-btn-navy{
+	background-color: #2b3d65;
+	color: rgb(242, 245, 73) !important;
+	padding: 10px;
+	border-radius: 5px;
+}
