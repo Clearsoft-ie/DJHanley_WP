@@ -90,9 +90,9 @@
         <div class="container">
             <!-- right -->
             <ul class="top-links list-inline float-right">
-                <li><a href="tel:1800303169"><i class="fa fa-phone"></i>1800-303-169</a></li>
-                <li><a href="tel:012810416"><i class="fa fa-phone"></i>01 2810416</a></li>
-                <li><a href="mailto:info@djhanleys.ie"><i class="fa fa-envelope"></i>info@djhanleys.ie</a></li>
+                <li style="padding-right: 5px;"><a href="tel:1800303169"><i class="fa fa-phone"></i>1800-303-169</a></li>
+                <li style="padding-left: 5px; padding-right: 5px;"><a href="tel:012810416"><i class="fa fa-phone"></i>01 2810416</a></li>
+                <li style="border-right:none"><a href="mailto:info@djhanleys.ie"><i class="fa fa-envelope"></i>info@djhanleys.ie</a></li>
             </ul>
 
 
@@ -175,7 +175,7 @@
                 <!-- /BUTTONS -->
 
                 <!-- Logo -->
-                <a class="logo float-left" href="<?php echo get_home_url() ?>">
+                <a href="<?php echo get_permalink(get_page_by_title('free-quotation-request'))?>" class="btn btn-featured btn-navy btn-inverse ">
                     <img class="wow fadeInRight animation-visible" src="<?php echo get_template_directory_uri() ;?>/assets/images/logo.jpg" alt="">
                 </a>
 
