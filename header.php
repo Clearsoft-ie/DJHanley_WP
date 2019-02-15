@@ -97,6 +97,21 @@
 
 
         </div>
+        <div class="border-top block clearfix">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Logo -->
+                    <div class="col-md-12">
+                        <a href="free-quotation-request" class="btn btn-featured btn-navy btn-inverse ">
+                            <span>GET A FREE QUOTE NOW</span>
+                            <i class="et-megaphone"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /Top Bar -->
 
@@ -198,3 +213,9 @@
         <!-- /Top Nav -->
 
     </div>
+
+    <?php if ( is_front_page()) : ?>
+
+    <?php else: ?>
+        <div class=container>
+    <?php endif; ?>

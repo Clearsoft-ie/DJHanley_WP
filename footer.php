@@ -12,7 +12,9 @@
  * @version 1.0
  */
 ?>
-
+<?php if ( !is_front_page()) : ?>
+    </div>
+<?php endif; ?>
 <!-- FOOTER -->
 <footer id="footer" class="footer-light">
     <div class="container">
@@ -150,13 +152,54 @@
     </div>
 </div><!-- /PRELOADER -->
 
+<script>
+    function initMap() {
+        var uluru = { lat: 53.076088, lng: -6.092814 };
+        var map = new google.maps.Map(document.getElementById('map3'), {
+            zoom: 12,
+            center: uluru,
+            scrollwheel: false
+        });
+
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<strong>DJ Hanley Removals & Storage</strong><br/>' +
+            'Chapel River,<br/>' +
+            'Killadreenan,<br/>' +
+            'Newtown Mount Kennedy,<br/>' +
+            'Co.Wicklow<br/>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            title: 'DJ Hanley Removals & Storage'
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+    }
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArD9J6nci2T70ycnSgL2BklRFB6kNHpNM&callback=initMap">
+</script>
+
+<script src="//www.youtube.com/iframe_api"></script>
+
 
 <!-- JAVASCRIPT FILES -->
 <script type="text/javascript">var plugin_path = '<?php echo get_template_directory_uri() ;?>/assets/plugins/';</script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ;?>/assets/plugins/jquery/jquery-3.2.1.min.js"></script>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ;?>/assets/js/scripts.js"></script>
-
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ;?>/assets/js/videobg.js"></script>
 
 <!-- PAGE LEVEL SCRIPT -->
 <script async type="text/javascript" src="<?php echo get_template_directory_uri() ;?>/assets/js/view/pack_realestate.js"></script>

@@ -5344,7 +5344,6 @@ a.btn.btn-sm {
 	line-height: 70px;
 	text-align: center;
 	width: calc(100% - 70px);
-	color: #fff;
 
 	overflow:hidden; 
 	text-overflow:ellipsis; 
